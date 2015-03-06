@@ -1,9 +1,6 @@
-fileTypes: [
-  "critic"
-  "md"
-  "markdown"
-  "txt"
-]
+# fileTypes: [
+#   "critic"
+# ]
 injectionSelector: "L: text, source"
 name: "Critic"
 patterns: [

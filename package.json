@@ -2,11 +2,13 @@
   "name": "atom-criticmarkup",
   "version": "0.0.0",
   "description": "Support for CriticMarkup in Atom",
-  "repository": "https://github.com/atom/atom-criticmarkup",
+  "repository": "https://github.com/claman/atom-criticmarkup",
   "license": "MIT",
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
   },
-  "dependencies": {
+  "dependencies": {},
+  "activationCommands": {
+    "atom-workspace": "critic-markup:addition"
   }
 }

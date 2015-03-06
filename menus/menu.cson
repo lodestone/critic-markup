@@ -1,0 +1,9 @@
+'context-menu':
+  'atom-workspace': [
+    {
+      label: 'CriticMarkup'
+      submenu: [
+        {label: 'Addition', command: 'critic-markup:addition'}
+      ]
+    }
+  ]
