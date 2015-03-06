@@ -1,0 +1,36 @@
+fileTypes: [
+  "critic"
+  "md"
+  "markdown"
+  "txt"
+]
+injectionSelector: "L: text, source"
+name: "Critic"
+patterns: [
+  {
+    comment: "Editorial Substitution"
+    match: "\\{~~(.*?)~~\\}"
+    name: "string.substitution"
+  }
+  {
+    comment: "Editorial Addition"
+    match: "\\{\\+\\+(.*?)\\+\\+[ \\t]*(\\[(.*?)\\])?[ \\t]*\\}"
+    name: "string.addition"
+  }
+  {
+    comment: "Editorial Deletion"
+    match: "\\{--(.*?)--[ \\t]*(\\[(.*?)\\])?[ \\t]*\\}"
+    name: "string.deletion"
+  }
+  {
+    comment: "Editorial Highlight"
+    match: "\\{\\=\\=(.*?)[ \\t]*(\\[(.*?)\\])?[ \\t]*\\=\\=\\}"
+    name: "string.highlight"
+  }
+  {
+    comment: "Editorial Mark"
+    match: "\\{>>(.*?)<<\\}"
+    name: "string.comment"
+  }
+]
+scopeName: "text.critic"

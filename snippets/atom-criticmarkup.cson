@@ -1,0 +1,7 @@
+".text.html.markdown:not(.meta.disable-markdown)":
+  "Add >> Mark":
+    prefix: ">>"
+    body: "{>> ${0:comment} <<}"
+  "Add ++ Mark":
+    prefix: "++"
+    body: "{++ ${0:insert} ++}"
