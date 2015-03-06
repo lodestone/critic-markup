@@ -1,9 +1,22 @@
 'context-menu':
-  'atom-workspace': [
+  'atom-text-editor': [
     {
       label: 'CriticMarkup'
       submenu: [
         {label: 'Addition', command: 'critic-markup:addition'}
+        {label: 'Subtraction', command: 'critic-markup:subtraction'}
       ]
     }
   ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'CriticMarkup'
+      'submenu': [
+        {'label': 'Addition', 'command': 'critic-markup:toggle'}
+        {label: 'Subtraction', command: 'critic-markup:subtraction'}
+      ]
+    ]
+  }
+]

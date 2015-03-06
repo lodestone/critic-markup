@@ -1,1 +1,1 @@
-module.exports = require ".lib/critic-markup"
+module.exports = require "./lib/critic-markup"
