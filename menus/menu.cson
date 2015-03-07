@@ -4,7 +4,10 @@
       label: 'CriticMarkup'
       submenu: [
         {label: 'Addition', command: 'critic-markup:addition'}
-        {label: 'Subtraction', command: 'critic-markup:subtraction'}
+        {label: 'Deletion', command: 'critic-markup:deletion'}
+        {label: 'Substitution', command: 'critic-markup:substitution'}
+        {label: 'Highlight', command: 'critic-markup:highlight'}
+        {label: 'Comment', command: 'critic-markup:comment'}
       ]
     }
   ]
@@ -14,8 +17,11 @@
     'submenu': [
       'label': 'CriticMarkup'
       'submenu': [
-        {'label': 'Addition', 'command': 'critic-markup:toggle'}
-        {label: 'Subtraction', command: 'critic-markup:subtraction'}
+        {'label': 'Addition', 'command': 'critic-markup:addition'}
+        {label: 'Deletion', command: 'critic-markup:deletion'}
+        {label: 'Substitution', command: 'critic-markup:substitution'}
+        {label: 'Highlight', command: 'critic-markup:highlight'}
+        {label: 'Comment', command: 'critic-markup:comment'}
       ]
     ]
   }
