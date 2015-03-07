@@ -1,29 +1,43 @@
 module.exports =
   activate: ->
-    atom.commands.add 'atom-workspace', "critic-markup:addition": => @addition()
-    atom.commands.add 'atom-workspace', "critic-markup:deletion": => @deletion()
-    atom.commands.add 'atom-workspace', "critic-markup:substitution": => @substitution()
-    atom.commands.add 'atom-workspace', "critic-markup:highlight": => @highlight()
-    atom.commands.add 'atom-workspace', "critic-markup:comment": => @comment()
+    atom.commands.add 'atom-workspace',
+      "critic-markup:addition": =>
+        @addition()
+      "critic-markup:deletion": =>
+        @deletion()
+      "critic-markup:substitution": =>
+        @substitution()
+      "critic-markup:highlight": =>
+        @highlight()
+      "critic-markup:comment": =>
+        @comment()
 
   addition: ->
-    # Assumes active pane item is an editor
     editor = atom.workspace.getActivePaneItem()
-    editor.insertText("{++++}")
+    selection = editor.getLastSelection()
+    text = selection.getText()
+    editor.insertText("{++"+text+"++}")
 
   deletion: ->
     editor = atom.workspace.getActivePaneItem()
-    editor.insertText("{----}")
+    selection = editor.getLastSelection()
+    text = selection.getText()
+    editor.insertText("{--"+text+"--}")
 
   substitution: ->
     editor = atom.workspace.getActivePaneItem()
-    editor.insertText("{~~ ~> ~~}")
+    selection = editor.getLastSelection()
+    text = selection.getText()
+    editor.insertText("{~~"+text+"~> ~~}")
 
   highlight: ->
     editor = atom.workspace.getActivePaneItem()
-    console.log editor
-    editor.insertText("{====}{>><<}")
+    selection = editor.getLastSelection()
+    text = selection.getText()
+    editor.insertText("{=="+text+"==}{>><<}")
 
   comment: ->
     editor = atom.workspace.getActivePaneItem()
-    editor.insertText("{>><<}")
+    selection = editor.getLastSelection()
+    text = selection.getText()
+    editor.insertText("{>>"+text+"<<}")

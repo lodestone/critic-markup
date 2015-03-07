@@ -9,10 +9,12 @@
   },
   "dependencies": {},
   "activationCommands": {
-    "atom-workspace": "critic-markup:addition",
-    "atom-workspace": "critic-markup:deletion",
-    "atom-workspace": "critic-markup:substitution",
-    "atom-workspace": "critic-markup:highlight",
-    "atom-workspace": "critic-markup:comment"
+    "atom-workspace": [
+      "critic-markup:addition",
+      "critic-markup:deletion",
+      "critic-markup:substitution",
+      "critic-markup:highlight",
+      "critic-markup:comment"
+    ]
   }
 }
