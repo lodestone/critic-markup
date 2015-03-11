@@ -7,28 +7,28 @@ fileTypes: [
 ]
 patterns: [
   {
+    name: "string.substitution"
     comment: "Editorial Substitution"
     match: "\\{~~(.*?)~~\\}"
-    name: "string.substitution"
   }
   {
+    name: "string.addition"
     comment: "Editorial Addition"
     match: "\\{\\+\\+(.*?)\\+\\+[ \\t]*(\\[(.*?)\\])?[ \\t]*\\}"
-    name: "string.addition"
   }
   {
+    name: "string.deletion"
     comment: "Editorial Deletion"
     match: "\\{--(.*?)--[ \\t]*(\\[(.*?)\\])?[ \\t]*\\}"
-    name: "string.deletion"
   }
   {
+    name: "string.highlight"
     comment: "Editorial Highlight"
     match: "\\{\\=\\=(.*?)[ \\t]*(\\[(.*?)\\])?[ \\t]*\\=\\=\\}"
-    name: "string.highlight"
   }
   {
+    name: "string.comment"
     comment: "Editorial Mark"
     match: "\\{>>(.*?)<<\\}"
-    name: "string.comment"
   }
 ]
